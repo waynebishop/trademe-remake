@@ -1,5 +1,65 @@
-/*body {
-	background-color: red; 
-}	*/
+body {
+	margin: 0; 
+}	
 
-/*Comment goes here*/
+#sister-sites small {
+	display : block;
+	color: #777777;
+}
+
+#sister-sites li {
+	display: inline-block;
+	margin-right: 1px;
+	padding: 4px 5px 0 5px;
+	border: 1px solid transparent; /* put invisible border that changes to blue below on hover so box stays same size on hover */
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	word-spacing: normal;
+}
+
+#sister-sites ul {
+	padding-left: 0;
+	margin: 0 auto; /* 0 top and auto left & right to centre it */
+	/*background-color: red;*/
+	width: 960px;
+
+}
+
+#sister-sites a {
+	text-decoration: none;
+	color: #0297d2;
+}
+
+#sister-sites {
+	background-color: #eeeeee;
+	padding-top: 5px;
+	border-bottom: 1px solid #aaaaaa;
+	word-spacing: -4px;
+}
+
+#active-site a{
+	color: #777777;
+}
+
+li#active-site { /* added li to front to get more points to overide main setting above */
+	background-color: white;
+	padding: 4px 5px 0 5px;
+	border-left: 1px solid #aaaaaa;
+	border-top: 1px solid #aaaaaa;
+	border-right: 1px solid #aaaaaa;
+	position: relative;
+	top: 3px;
+}
+
+#sister-sites li:hover:not(#active-site) /* not is here so hover doesn't work on active site page */ {
+	background: white;
+	border: 1px solid #bde2f1;
+	border-bottom: none;
+}
+
+#sister-sites li:hover:not(#active-site) a,
+#sister-sites li:hover:not(#active-site) a small {
+	color: #ff4700;
+}
+
+
