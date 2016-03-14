@@ -62,4 +62,59 @@ li#active-site { /* added li to front to get more points to overide main setting
 	color: #ff4700;
 }
 
+main {
+	width: 960px;
+	margin: 0 auto;
 
+}
+
+.product {
+	background-color: #eeeeee;
+	width: 19%;
+	height: 200px;
+	margin-bottom: 50px;
+	float: left;
+	margin-right: 11px;
+	position: relative; /* made relative so absolute pos for discount works inside this div not whole page*/
+	border: 1px solid #999999;
+	box-sizing: border-box; /* keeps all content including border inside box size demension */
+}
+
+.product h2 {
+	font-size: 16px;
+	font-weight: normal;
+	margin-top: 0;
+	/* below to make ... on too long txt */
+	white-space: nowrap; /* stops txt wraparound to next line, makes it stay on one line */
+	overflow: hidden; /* now hide overflow certed by nowrap */
+	text-overflow: ellipsis; /* puts elipsis ... at the end of txt */
+}
+
+.product img {
+	max-width: 100%;
+}
+
+.product:last-child {  /* remove margin far right div to get rid of space far right*/
+	margin-right: 0;
+}
+
+.product div {
+	padding: 10px;
+
+}
+
+.product p {
+	font-weight: bold; /* make price bold */
+	text-align: right;
+
+}
+
+.discount {
+	background-color: #e34647;
+	padding: 4px 8px;
+	color: white;
+	position: absolute; /* position discount tag top left - see below top and left also */
+	top: 5px;
+	left: -5px;
+
+}
