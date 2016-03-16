@@ -221,4 +221,81 @@ body > footer ul {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#333333',GradientType=0 ); /* IE6-9 */
 }
 
+/* categories section */
 
+#search { /* big grey background */
+	background-color: #efefef;
+	padding: 20px;
+}
+
+#categories { /* white background */
+	background-color: white;
+	width: 66.66%;
+}
+
+.container { /* set up container size and center */
+	width: 960px;
+	margin: 0 auto;
+}
+
+/* main categories part with colored tabs */
+
+#main-categories { 
+	padding-left: 0;
+	list-style: none;
+}
+
+#main-categories li {
+	display: inline-block;
+	width: 156px;
+	text-align: center;
+	padding: 10px 0;
+
+}
+
+#main-categories li:nth-child(1) {
+	background-color: #f19608;
+}  
+
+#main-categories li:nth-child(2) {
+	background-color: #f06534;
+} 
+
+#main-categories li:nth-child(3) {
+	background-color: #738297;
+} 
+
+#main-categories li:nth-child(4) {
+	background-color: #72ae2d;
+	width: 159px;
+} 
+
+#main-categories a {
+	font-size: 24px;
+	color: white;
+	text-decoration: none;
+}
+
+#categories ul:not(#main-categories) { /* NO FUNCTION but this is an alternative to below*/
+
+}
+
+#main-categories ~ ul { /* means applies to only ul's after first ul */
+	list-style: none;
+	padding-left: 20px;
+	background-color: orange;
+	width: 33.3333%;
+	float: left;
+	box-sizing: border-box; /* to keep within main size of box ie padding won't change it */
+
+} 
+
+main {
+	clear: both; /* to fix float problem, clear above floating elements so following stuff stays below */	
+}
+
+#search:after { /* STD WORKAROUND - inject after the content */
+	content: ''; /* inject invisible block element one line - see below too*/
+	display: block;
+	clear: both; /* clear L & R floating elements above */
+}
